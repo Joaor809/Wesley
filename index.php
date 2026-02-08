@@ -108,15 +108,18 @@
             "BNCE" 0,
             "INFM" 0,
             "SPAC" 0;
-        
+
     }
-    .ilustration span{
+
+    .ilustration span {
         font-size: 20px;
     }
-    #column-text{
+
+    #column-text {
         padding: 50px;
     }
-    .button-ilustration button{
+
+    .button-ilustration button {
         background: linear-gradient(135deg, #d6b15a, #b8933f, #8f6f2a);
         width: 8rem;
         height: 2.5rem;
@@ -126,17 +129,39 @@
         color: black;
         font-weight: bold;
     }
-    .button-ilustration button:hover{
+
+    .button-ilustration button:hover {
         transform: translateY(-4px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     }
-    .button-ilustration{
+
+    .button-ilustration {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .packages{
+
+    .packages {
         color: #bfc3c7;
+    }
+
+    .media{
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .media video {
+        width: 70%;
+        height: auto;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    .media img{
+        justify-content: center;
+        align-items: center;
     }
 </style>
 
@@ -280,10 +305,14 @@
                 </div>
             </div>
         </section>
-        <section>
-
+        <section class="media">
+            <video autoplay loop muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+                <source src="media/onça.mp4" type="video/mp4">
+            </video>
+            <img src="imagens/ilustrativa2.png" alt="Segunda Imagem Ilustrativa">
         </section>
     </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </html>
