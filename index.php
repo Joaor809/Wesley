@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesley Macedo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
@@ -17,6 +18,9 @@
         padding: 0;
         background-color: #141414;
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     .banner {
@@ -34,8 +38,9 @@
     }
 
     .banner h1 {
+        text-shadow: 0 0 4px black;
         font-size: 6rem;
-        margin-top: 0.2%;
+        margin-top: 2%;
         font-family: "Merriweather", serif;
         font-optical-sizing: auto;
         font-weight: <weight>;
@@ -45,7 +50,8 @@
     }
 
     .banner p {
-        margin-top: 18rem;
+        text-shadow: 0 0 4px white;
+        margin-top: 30rem;
         color: black;
         font-size: 25px;
         font-family: "Inter", sans-serif;
@@ -91,7 +97,7 @@
 
     .pack-button button:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 12px 30px rgba(83, 83, 83, 0.5);
     }
 
     .ilustration img {
@@ -132,7 +138,7 @@
 
     .button-ilustration button:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 12px 30px rgba(83, 83, 83, 0.5);
     }
 
     .button-ilustration {
@@ -145,23 +151,49 @@
         color: #bfc3c7;
     }
 
-    .media{
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        width: 100vw;
-        height: 100vh;
+    .media {
+        text-align: center;
     }
 
     .media video {
         width: 70%;
-        height: auto;
-        object-fit: cover;
-        pointer-events: none;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.08),
+            0 18px 45px rgba(255, 255, 255, 0.12);
     }
-    .media img{
+
+    .img-ilustrative {
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-bottom: 3%;
+    }
+
+    .spaccing {
+        margin-top: 6%;
+    }
+
+    .contacts {
+        color: white;
         justify-content: center;
         align-items: center;
+        text-align: center;
+    }
+
+    .contacts h5 {
+        margin-top: 1%;
+    }
+
+    footer {
+        background-color: #191919;
+        width: 100%;
+    }
+
+    .ilustration {
+        color: white;
     }
 </style>
 
@@ -179,7 +211,7 @@
             <h3>"Aos 30 anos, divido minha paixão pela família - Lidiane e o pequeno Abner - com a precisão da Arquitetura. Como modelador 3D e estudante de Urbanismo, utilizo SketchUp e o V-Ray para dar vida e realismo a espaços que ainda estão no papel."</h3>
         </section>
         <section class="packages">
-            <h2 class="mt-4">PACOTES</h2>
+            <h2 class="mt-5">PACOTES</h2>
             <section class="pack_1">
                 <div class="d-flex justify-content-start align-items-center gap-3 me-4 mt-3">
                     <h3>Pacote - 01</h3>
@@ -211,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pack-button mt-3">
+                <div class="pack-button mt-3 mb-4">
                     <button>R$10,00</button>
                 </div>
             </section>
@@ -246,7 +278,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pack-button mt-3">
+                <div class="pack-button mt-3 mb-4">
                     <button>R$20,00</button>
                 </div>
             </section>
@@ -281,16 +313,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="pack-button mt-3">
+                <div class="pack-button mt-3 mb-4">
                     <button>R$45,00</button>
                 </div>
             </section>
         </section>
         <section class="ilustration mt-4">
-            <!--<h2>ILUSTRATIVO POR AMBIENTE</h2>
-            <img src="imagens/ilustrativa.jpg" alt="Imagem Ilustrativa">
-            <p>O ambiente decorado com a cor da pedra selecionada mostrando como ficará a pedra no local.</p>
-            <span>OBS.: não é projeto, é apenas ilustrativo; serão enviadas as medidas detalhadas, a cor selecionada das pedras e dos móveis, além de um esboço legível.</span>-->
             <h1>ILUSTRATIVO POR AMBIENTE</h1>
             <div class="row">
                 <div class="col-6" id="column-image">
@@ -306,12 +334,33 @@
             </div>
         </section>
         <section class="media">
-            <video autoplay loop muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+            <video class="mx-auto d-block" autoplay loop muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="media/onça.mp4" type="video/mp4">
             </video>
-            <img src="imagens/ilustrativa2.png" alt="Segunda Imagem Ilustrativa">
+            <div class="spaccing">
+                <div class="img-ilustrative">
+                    <img class="mx-auto d-block" src="imagens/ilustrativa2.png" alt="Segunda Imagem Ilustrativa">
+                </div>
+            </div>
+
         </section>
     </main>
+    <footer>
+        <div class="contacts">
+            <h3>Contatos</h3>
+            <a href="https://www.instagram.com/wesley_mgss?igsh=MTMyYjh0cmw1ZDJtNg%3D%3D"><i class="bi bi-instagram text-white me-3 fs-3"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61585247745680&rdid=jzlmaFrO2tGA4tJq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1G9AM6Xh4z%2F#"><i class="bi bi-facebook text-white me-3 fs-3"></i></a>
+            <a href="#"><i class="bi bi-twitter text-white me-3 fs-3"></i></a>
+            <a href="#"><i class="bi bi-linkedin text-white fs-3 me-3"></i></a>
+            <a href="#"><i class="bi bi-whatsapp text-white fs-3"></i></a>
+            <h5>E-mail:</h5>
+            <p>wmacedo765@gmail.com</p>
+        </div>
+        <!--
+            <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-success">
+            Fale conosco
+        </a>-->
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
