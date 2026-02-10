@@ -17,10 +17,21 @@
         margin: 0;
         padding: 0;
         background-color: #141414;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
     }
 
     .banner {
