@@ -195,6 +195,123 @@
     .ilustration {
         color: white;
     }
+
+    @media (max-width: 575px) {
+        .banner {
+            height: auto;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+        }
+
+        .banner p {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .about {
+            padding: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .packages .row .col {
+            margin-bottom: 1rem;
+        }
+
+        .ilustration .row {
+            flex-direction: column;
+        }
+
+        #column-text {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .media video {
+            width: 100%;
+        }
+
+        .img-ilustrative {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        .banner h1 {
+            font-size: 3.5rem;
+        }
+
+        .banner p {
+            font-size: 1.3rem;
+        }
+
+        .about {
+            padding: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .media video {
+            width: 90%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .banner {
+            padding-left: 3rem;
+        }
+
+        .banner h1 {
+            font-size: 4.5rem;
+        }
+
+        .about {
+            padding-left: 10%;
+            padding-right: 10%;
+            font-size: 1.8rem;
+        }
+
+        .media video {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+        .banner h1 {
+            font-size: 5rem;
+        }
+
+        .about {
+            font-size: 2rem;
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px) {
+
+        .about {
+            max-width: 1100px;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 1400px) {
+
+        .banner {
+            padding-left: 6rem;
+        }
+
+        .media video {
+            max-width: 1000px;
+        }
+
+        .img-ilustrative {
+            max-width: 1000px;
+        }
+    }
 </style>
 
 <body>
@@ -319,16 +436,24 @@
             </section>
         </section>
         <section class="ilustration mt-4">
-            <h1>ILUSTRATIVO POR AMBIENTE</h1>
-            <div class="row">
-                <div class="col-6" id="column-image">
-                    <img src="imagens/ilustrativa.jpg" alt="Imagem Ilustrativa">
-                </div>
-                <div class="col" id="column-text">
-                    <p>O ambiente decorado com a cor da pedra selecionada mostrando como ficará a pedra no local</p>
-                    <span>OBS.: não é projeto, é apenas uma imagem ilustrativa; o cliente deverá mandar as medidas detalhadas, cor selecionada, pedras e móveis, além de um esboço legível.</span>
-                    <div class="button-ilustration mt-2">
-                        <button>R$50,00</button>
+            <h1 class="text-center mb-4">ILUSTRATIVO POR AMBIENTE</h1>
+            <div class="ilustration-full">
+                <img src="imagens/ilustrativa.jpg" alt="Imagem Ilustrativa">
+            </div>
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-8 mx-auto text-center" id="column-text">
+                        <p>
+                            O ambiente decorado com a cor da pedra selecionada mostrando
+                            como ficará a pedra no local
+                        </p>
+                        <span>
+                            OBS.: não é projeto, é apenas uma imagem ilustrativa; o cliente deverá mandar
+                            as medidas detalhadas, cor selecionada, pedras e móveis, além de um esboço legível.
+                        </span>
+                        <div class="button-ilustration mt-3">
+                            <button>R$50,00</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,10 +481,6 @@
             <h5>E-mail:</h5>
             <p>wmacedo765@gmail.com</p>
         </div>
-        <!--
-            <a href="https://wa.me/5591999999999" target="_blank" class="btn btn-success">
-            Fale conosco
-        </a>-->
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
